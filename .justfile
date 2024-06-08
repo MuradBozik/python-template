@@ -24,7 +24,8 @@ create_environment: _update_and_export
   #!/usr/bin/env bash
   echo "New conda env created. Activate with:"
   echo ">>> conda activate {{PROJECT_NAME}}"
-  echo ">>> just update_environment"
+  echo "Make sure to install pre-commit hooks:"
+  echo ">>> pre-commit install"
   if [[ -f .post-create-environment.txt ]]; then
     cat .post-create-environment.txt
   fi
